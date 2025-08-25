@@ -1,0 +1,424 @@
+html {
+    scroll-behavior:smooth
+}
+
+/* Body styling */
+body {
+    margin: auto;
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #FFC4C4;
+}
+
+/* Navigation bar styling */
+header {
+    background-color: #850E35;
+    color: #FFF5E4;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 100px;
+    top:0 ;
+    position: sticky;
+}
+
+a{
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
+    color: #FFF5E4;
+}
+
+.menu-line{
+    height: 3px;
+    width: 20px;
+    background-color:#FFF5E4;
+    margin-bottom: 3px;
+}
+
+.menu {
+    display: none;
+}
+
+.nav-corner img {
+    filter: invert(100);
+}
+
+/* navigation bar styling for screen width of 640 px or lesser */
+@media (max-width: 640px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        border-bottom:  2px solid #FFF5E4 ;
+        text-align: center;
+    }
+
+    nav{
+        display: none;
+        padding-bottom: 30px;
+    }
+
+    .nav-corner {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .showmenu{
+        display: block;
+    }
+}
+
+/* overview section styling */
+.intro {
+    background-image: url("/images/chocolate\ box.jpg");
+    height: 100vh;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.intro-text {
+    padding: 0px 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(133, 14, 53,0.7);
+}
+
+.intro-text p {
+    margin: 0%;
+    font-size: 36px;
+    color: #FFF5E4;
+    text-align: center;
+}
+
+/* overview section styling for screen width of 768 px or lesser */
+@media (max-width: 768px){
+
+    .intro-text {
+        padding: 0px 50px;
+    }
+
+    .intro-text p {
+        font-size: 26px;
+    }
+}
+
+/* Customizable Chocolate box section styling */
+.box-container {
+    display: grid;
+    grid-template-columns: 50% 50%;  /* The input boxes and chocolate box are placed next to each other*/
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.box-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#message {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: none; 
+    margin-top: 50px;
+}
+
+.box-input div{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding-top: 20px;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 500;
+}
+.box-input h1{
+    text-align: center;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: auto auto auto;  /* three columns layout */
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.choco-slot {
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+.normal {
+    background-color: #773d00 !important; /* Color changes based on user's chocolate selection*/
+}
+
+.vanilla {
+    background-color: #ead1a2 !important;  /* Color changes based on user's chocolate selection*/
+}
+
+.strawberry {
+    background-color: #f32841 !important; /* Color changes based user's on chocolate selection*/
+}
+
+/* Customizable Chocolate box for screen width of 796 px or lesser */
+@media (max-width: 796px){
+    .box-container {
+
+        /*The input boxes and chocolate box are placed in seperate rows*/
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Product section styling*/
+.product-section{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.product-item{
+    width: 400px;
+    background-color: #850E35;
+    color: #FFC4C4;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-item img {
+    width: 100%;
+    height: 250px;
+    object-fit:cover
+}
+
+.add{
+    padding: 10px;
+}
+
+.add button{
+    background-color: #FFC4C4;
+    color: black;
+    font-weight: 550;
+    font-size: 18px;
+    width: 100%;
+    border: 0;
+    padding: 7px;
+    
+}
+
+.basket {
+    background-color: #F7E7CE;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.basket h2 {
+    text-align: center;
+}
+.basket ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.basket ul li {
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 5px black solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer styling */
+footer {
+    background-color: #850E35;
+    margin-bottom: auto;
+    color: white;
+    margin-top: 50px;
+}
+
+footer form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-title{
+    font-size: 25px;
+    color: white;
+}
+
+.last-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.last-section div {
+    margin-bottom: 20px;
+}
+
+.subscribe input[type=email] {
+    background-color: #850E35;
+    color: white;
+    border: 2px solid white;
+    border-radius: 0%;
+    width: 100%;
+}
+
+.subscribe input[type=email]::placeholder{
+    color: white;
+}
+
+.subscribe input[type=email]:focus{
+    outline: none;
+}
+
+.subscribe input[type=submit] {
+    background-color: white;
+    color: #850E35;
+    font-weight: 700;
+    border-radius: 0%;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe input[type=submit]:hover{
+    background-color: black;
+    color:white;
+}
+
+.social-media img {
+    height: 35px;
+    width: 35px;
+}
+
+.quicklinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.quicklinks a{
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.copyright p {
+    margin: 0%;
+}
+
+/*Login page styling*/
+
+.log-head{
+    margin-top: 50px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+    align-items: center;
+    width: 23%;
+    border: 2px #850E35 solid ;
+}
+
+.login input{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    border: none;
+    background-color: unset;
+    border-bottom: 2px #850E35 solid;
+}
+
+.login input::placeholder {
+    color: #EE6983;
+    font-style: italic;
+}
+
+.login input[type=submit]{
+    background-color: #850E35;
+    color: #FFC4C4;
+}
+
+.login input:focus {
+    outline: none;
+}
+
+.log-option {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log-option a{
+    padding: 5px;
+    color: #850E35;
+}
+
+/* Login page styling for screen width of 1180 px or lesser */
+@media (max-width: 1180px) {
+    .login {
+        width: 35%;
+    }
+}
+
+/* Login page styling for screen width of 943 px or lesser */
+@media (max-width: 943px) {
+    .login {
+        width: 50%;
+    }
+}
+
+/* Login page styling for screen width of 636 px or lesser */
+@media (max-width: 636px) {
+    .login {
+        width: 70%;
+    }
+}

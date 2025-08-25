@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weston’s Chocolate Box</title>
+    <link rel="stylesheet" href="/Stylesheet/style.css">   <!-- linked to stylesheet file-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/chocolate box.jpg">  <!-- Icon of the browser tab -->
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <header>
+        <h1>Choco</h1>
+        <nav>
+            <a href="">Home</a>
+            <a href="/pages/product.html">Product</a>
+            <a href="/pages/sign.html">Sign Up</a>
+        </nav>
+
+        <div class="nav-corner">
+            <a href="#basket"><img src="/images/cart.png" alt="cart icon" width="20" height="20"></a>
+            <div class="menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!--Overview section-->
+    <div class="intro">
+        <div class="intro-text">
+            <p>Everything is that much more special with a hint of variety and with chocolates, it's no different!
+                Peruse through our wide collection of chocolate flavors ranging from Dark to White and everything in
+                between.</p>
+        </div>
+    </div>
+
+    <!-- Customizable Chocolate box section-->
+    <div class="box-container">
+
+        <div class="box-input">
+            <h1>Customize your chocolate box</h1>
+            <form id="chocolate-form">
+                <div>
+                    <label for="Choco">Normal Chocolate:</label>
+                    <input type="number" id="Choco" min="0" max="9" step="1" value="0">
+                </div>
+
+                <div>
+                    <label for="Vanilla">Vanilla Chocolate:</label>
+                    <input type="number" id="Vanilla" min="0" max="9" step="1" value="0">
+                </div>
+
+                <div>
+                    <label for="Strawberry">Strawberry Chocolate:</label>
+                    <input type="number" id="Strawberry" min="0" max="9" step="1" value="0">
+                </div>
+            </form>
+
+            <p id="message">Your box is full! You cannot add more chocolates.</p>
+        </div>
+
+        <div class="box">
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+            <div class="choco-slot"></div>
+        </div>
+    </div>
+
+    <!-- Product section -->
+    <h1>Chocolate Collections</h1>
+    <div class="product-section">
+        <div class="product-container">
+            <div class="product-item">
+                <img src="/images/chocolate product 1.jpeg" alt="chocolate product 1">
+                <h3>GOLD BALLOTIN BOX, 4PC</h3>
+                <p>AED 60.00</p>
+
+                <!-- We created data-name and data-price attribute to retrieve the details of the product and display them in basket list -->
+                <div class="add">
+                    <button class="add-to-cart" data-name="GOLD BALLOTIN BOX, 4PC" data-price="60.00">ADD TO CART</button>  
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/images/chocolate product 2.jpg" alt="chocolate product 2">
+                <h3>GOLD GIFT BOX, 15PC</h3>
+                <p>AED 209.00</p>
+                <div class="add">
+                    <button class="add-to-cart" data-name="GOLD GIFT BOX, 15PC" data-price="209.00">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/images/chocolate product 3.jpg" alt="chocolate product 3">
+                <h3>ROYAL GIFT BOX, MINI, 18PC</h3>
+                <p>AED 185.00</p>
+                <div class="add">
+                    <button class="add-to-cart" data-name="ROYAL GIFT BOX, MINI, 18PC" data-price="185.00">ADD TO
+                        CART</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/images/chocolate product 4.jpg" alt="chocolate product 4">
+                <h3>TRUFFLES GIFT BOX, 15PC</h3>
+                <p>AED 240.00</p>
+                <div class="add">
+                    <button class="add-to-cart" data-name="TRUFFLES GIFT BOX, 15PC" data-price="240.00">ADD TO
+                        CART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="basket" id="basket">
+            <h2>View Your Basket</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer with social media links and other -->
+    <footer>
+        <div class="last-section">
+            <div class="subscribe">
+                <p class="foot-title">GET THE NEWSLETTER</p>
+                <p>Subscribe your email now to receive all the news about Our Choco </p>
+                <form>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="submit" value="Subscribe" id="submit">
+                </form>
+            </div>
+
+            <div class="social-media">
+                <p class="foot-title">Follow Us</p>
+                <a href=""><img src="/images/facebook-white.png" alt="Facebook"></a>
+                <a href=""><img src="/images/instagram.png" alt="Instagram"></a>
+                <a href=""><img src="/images/youtube.png" alt="Youtube"></a>
+
+            </div>
+
+            <div class="quicklinks">
+                <p class="foot-title"> Customer Service</p>
+                <a href=""> Privacy Policy </a>
+                <a href=""> Return, Refund & Cancellation </a>
+                <a href=""> Shipping Terms </a>
+                <a href=""> Terms & Conditions </a>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2024 CHOCO</p>
+
+        </div>
+    </footer>
+
+</body>
+<script src="JavaScript/script.js"></script>  <!-- linked to javascript file-->
+</html>
